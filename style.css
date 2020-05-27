@@ -1,0 +1,154 @@
+html {
+    font-size: 62.5%; /* 16px * 62.5 = 10px = 1rem */
+    box-sizing: border-box;
+}
+
+body {
+    font: 1.6rem Helvetica;
+    height: 100vh;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height: 100%;
+}
+
+/* All Styles */
+a {
+    text-decoration: none;
+  }
+
+a:hover {
+    color:#ff8000
+}
+
+/* Header Styles */
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: crimson;
+    color: white;
+}
+
+.brand a {
+    color: #ffffff;
+    font-family: cursive;
+    font-size: 3rem;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.menu-link a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-link a:last-of-type{
+    padding-left: 1rem;
+}
+
+.menu-link a:hover{
+    color: #eac3c7;
+}
+
+.sidebar {
+    position: fixed;
+    background-color: #eee;
+    height: 100%;
+    padding: 1rem;
+    transform: translateX(-32rem);
+    width: 30rem;
+    transition: all 0.5s;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+i.fas.fa-bars {
+    cursor: pointer;
+}
+
+i.fas.fa-window-close {
+    font-size: 2.5rem;
+    color: crimson;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+}
+
+/* Main Styles */
+main {
+    grid-area: main;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.products li {
+    list-style-type: none;
+    padding: 0;
+    flex: 0 1 34rem;
+    margin: 1rem;
+    height: 50rem;
+    border-bottom: .1rem #c0c0c0 solid;
+  }
+
+  .product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .product-name a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: crimson;
+  }
+
+  .product-name a:hover {
+    color: #ff8000;
+  }
+
+  .product-brand{
+    font-size: 1.2rem;
+    color:#808080;
+  }
+  .product-price{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .product-image{
+    max-width: 34rem;
+    max-height: 34rem;
+  }
+  .product-rating{
+    margin-bottom: 1rem;
+  }
+
+/* Footer Styles */
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: grey;
+    background-color: rgb(65, 65, 65);
+    padding: 2rem;
+}
