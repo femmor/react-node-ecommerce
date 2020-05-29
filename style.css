@@ -93,6 +93,7 @@ main {
     grid-area: main;
 }
 
+/* Product styles */
 .products {
     display: flex;
     justify-content: center;
@@ -140,6 +141,10 @@ main {
   }
   .product-rating{
     margin-bottom: 1rem;
+  }
+
+  span.out-of-stock {
+    color: crimson !important;
   }
 
 /* Footer Styles */

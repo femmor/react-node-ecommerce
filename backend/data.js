@@ -10,7 +10,7 @@ const data = {
             numReviews: 1,
             description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, nihil!",
             status: true,
-            qty: 0
+            countInStock: 10
         },
         {
             _id: "2",
@@ -22,7 +22,7 @@ const data = {
             numReviews: 20,
             description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, nihil!",
             status: true,
-            qty: 0
+            countInStock: 5
         },
         {
             _id: "3",
@@ -34,7 +34,7 @@ const data = {
             numReviews: 10,
             description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, nihil!",
             status: true,
-            qty: 0
+            countInStock: 0
         }
     ]
 }
