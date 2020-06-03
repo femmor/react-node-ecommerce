@@ -1,9 +1,25 @@
 const express = require("express")
 const port = 5000;
+import dotenv from "dotenv"
+import config from "./config"
+import mongoose from "mongoose"
+
+import userRoute from "./routes/userRoute"
+
+dotenv.config();
+
+const mongodbUrl = config.MONGODB_URL;
+mongoose.connect(mongodbUrl, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+}).catch(error => console.log(error.reason))
 
 import data from "./data"
 
 const app = express();
+
+app.use("/api/users", userRoute)
 
 // Get single product
 app.get("/api/products/:id", (req, res) => {
