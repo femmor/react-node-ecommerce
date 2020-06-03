@@ -1,8 +1,8 @@
-const express = require("express")
-const port = 5000;
+import express from "express"
+import mongoose from "mongoose"
+import bodyParser from "body-parser"
 import dotenv from "dotenv"
 import config from "./config"
-import mongoose from "mongoose"
 
 import userRoute from "./routes/userRoute"
 
@@ -18,6 +18,7 @@ mongoose.connect(mongodbUrl, {
 import data from "./data"
 
 const app = express();
+app.use(bodyParser.json())
 
 app.use("/api/users", userRoute)
 
@@ -38,6 +39,6 @@ app.get("/api/products", (req, res) => {
     res.send(data.products)
 })
 
-app.listen(port, () => {
-    console.log("Your app is running on http://localhost/"+port)
+app.listen(5000, () => {
+    console.log("Your app is running on http://localhost/5000")
 })
